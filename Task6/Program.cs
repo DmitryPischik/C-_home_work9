@@ -1,6 +1,6 @@
 ﻿// Написать программу вычисления функции Аккермана
 
-static int AkkermansFunction(int m, int n) 
+int AkkermansFunction(int m, int n) 
 { 
     if (m == 0) 
     { 
@@ -15,10 +15,8 @@ static int AkkermansFunction(int m, int n)
         return AkkermansFunction(m - 1, AkkermansFunction(m, n - 1)); 
     } 
 }
-
-Console.WriteLine("Введите m:"); 
-int m = int.Parse(Console.ReadLine()); 
-Console.WriteLine("Введите n:");  
-int n = int.Parse(Console.ReadLine());
-Console.WriteLine("Результат: " + AkkermansFunction(m, n));  
-Console.ReadKey();
+System.Console.WriteLine("Введите m:"); 
+int m = int.Parse(System.Console.ReadLine() ?? "0"); 
+System.Console.WriteLine("Введите n:");  
+int n = int.Parse(System.Console.ReadLine() ?? "0");
+System.Console.WriteLine("Результат: " + AkkermansFunction(m, n));
